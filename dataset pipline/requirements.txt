@@ -1,0 +1,27 @@
+# SLN-Breast MIL Dataset Pipeline
+#
+# Reproduces: Hugging Face download → CLAM clone → 256×256 patch coords
+# (strict white-only background removal).
+#
+# Usage (from repo root /workspace):
+#   pip install -r "dataset pipline/requirements.txt"
+#   # system: apt install openslide-tools
+#   python "dataset pipline/run_pipeline.py"
+#
+# Common flags:
+#   python "dataset pipline/run_pipeline.py" --skip-download
+#   python "dataset pipline/run_pipeline.py" --mask-example-only
+#   python "dataset pipline/run_pipeline.py" --labels-only
+
+huggingface_hub==1.31.0
+hf_transfer==0.1.9
+tqdm==4.70.1
+datasets==5.0.1
+openslide-python==1.4.6
+opencv-python-headless==5.0.0.93
+h5py==3.16.0
+pandas==3.0.5
+matplotlib==3.11.2
+scikit-learn==1.9.1
+scipy==1.18.1
+Pillow==11.0.0

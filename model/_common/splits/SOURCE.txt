@@ -1,0 +1,3 @@
+Copied from /workspace/resnet/resnet50/splits
+seed=42
+Do not reshuffle.

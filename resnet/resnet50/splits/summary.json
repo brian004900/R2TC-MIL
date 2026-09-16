@@ -1,0 +1,81 @@
+{
+  "seed": 42,
+  "n_folds": 5,
+  "folds": [
+    {
+      "fold": 0,
+      "split": "train",
+      "stats": "n=78 pos=21 (0.269) neg=57 (0.731)"
+    },
+    {
+      "fold": 0,
+      "split": "val",
+      "stats": "n=26 pos=7 (0.269) neg=19 (0.731)"
+    },
+    {
+      "fold": 0,
+      "split": "test",
+      "stats": "n=26 pos=8 (0.308) neg=18 (0.692)"
+    },
+    {
+      "fold": 1,
+      "split": "train",
+      "stats": "n=78 pos=22 (0.282) neg=56 (0.718)"
+    },
+    {
+      "fold": 1,
+      "split": "val",
+      "stats": "n=26 pos=7 (0.269) neg=19 (0.731)"
+    },
+    {
+      "fold": 1,
+      "split": "test",
+      "stats": "n=26 pos=7 (0.269) neg=19 (0.731)"
+    },
+    {
+      "fold": 2,
+      "split": "train",
+      "stats": "n=78 pos=22 (0.282) neg=56 (0.718)"
+    },
+    {
+      "fold": 2,
+      "split": "val",
+      "stats": "n=26 pos=7 (0.269) neg=19 (0.731)"
+    },
+    {
+      "fold": 2,
+      "split": "test",
+      "stats": "n=26 pos=7 (0.269) neg=19 (0.731)"
+    },
+    {
+      "fold": 3,
+      "split": "train",
+      "stats": "n=78 pos=22 (0.282) neg=56 (0.718)"
+    },
+    {
+      "fold": 3,
+      "split": "val",
+      "stats": "n=26 pos=7 (0.269) neg=19 (0.731)"
+    },
+    {
+      "fold": 3,
+      "split": "test",
+      "stats": "n=26 pos=7 (0.269) neg=19 (0.731)"
+    },
+    {
+      "fold": 4,
+      "split": "train",
+      "stats": "n=78 pos=22 (0.282) neg=56 (0.718)"
+    },
+    {
+      "fold": 4,
+      "split": "val",
+      "stats": "n=26 pos=7 (0.269) neg=19 (0.731)"
+    },
+    {
+      "fold": 4,
+      "split": "test",
+      "stats": "n=26 pos=7 (0.269) neg=19 (0.731)"
+    }
+  ]
+}
