@@ -8,6 +8,20 @@ R²T-MIL restores spatial context among patches/regions, yet sparse disease evid
 
 ![R²TC-MIL structure](img/R2TC-MIL.png)
 
+## Related Work
+### Where Clustering Acts in MIL (Clustering MIL Comparison)
+
+Prior cluster-based MIL methods mainly change features, bag composition, cluster representations, or which clusters are kept. R²TC instead maps cluster scores back to soft instance weights.
+
+| Method | Role of clustering | Instance-level action |
+| --- | --- | --- |
+| CLAM (2021) | Constrains or guides feature learning | Updates features; does not reweight instances |
+| DGMIL (2022) | Shapes instance labels and feature distributions | Relabels or reshapes instance features / predictions |
+| ProDiv (2024) | Changes training bag composition | Samples or selects which instances enter the bag |
+| CAAMIL (2025) | Builds cluster-level attention and representations | Attends over clusters; does not soft-reweight instances |
+| csMIL (2025) | Learns sparse cluster pooling weights | Selects or discards whole clusters |
+| R²TC (2026) | Converts cluster scores into instance weights | Soft-reweights every instance while keeping all patches |
+
 ## Experiment
 
 ### Dataset & splits
@@ -33,19 +47,6 @@ MIL methods share frozen **ImageNet ResNet50-trunc (1024-d)** patch features. Th
 
 
 5-fold test metrics at first-best val AUC.
-
-## Where Clustering Acts in MIL (Clustering MIL Comparison)
-
-Prior cluster-based MIL methods mainly change features, bag composition, cluster representations, or which clusters are kept. R²TC instead maps cluster scores back to soft instance weights.
-
-| Method | Role of clustering | Instance-level action |
-| --- | --- | --- |
-| CLAM (2021) | Constrains or guides feature learning | Updates features; does not reweight instances |
-| DGMIL (2022) | Shapes instance labels and feature distributions | Relabels or reshapes instance features / predictions |
-| ProDiv (2024) | Changes training bag composition | Samples or selects which instances enter the bag |
-| CAAMIL (2025) | Builds cluster-level attention and representations | Attends over clusters; does not soft-reweight instances |
-| csMIL (2025) | Learns sparse cluster pooling weights | Selects or discards whole clusters |
-| R²TC (2026) | Converts cluster scores into instance weights | Soft-reweights every instance while keeping all patches |
 
 ## Citation
 
