@@ -1,14 +1,15 @@
 # R²TC-MIL: Weakly Supervised WSI Classification with Cluster-Conditioned Instance Reweighting
 
+<small>Keywords: multiple instance learning · whole-slide image · computational pathology · cluster-conditioned instance reweighting · weakly supervised learning</small>
+
 ## Introduction
 
 R²T-MIL restores spatial context among patches/regions, yet sparse disease evidence can still be diluted in bag pooling. Clustering is already common in MIL (usually for **sampling, selection, or prototype pooling**). R²TC-MIL instead uses a lightweight **Cluster-Conditioned Instance Reweighting (CIR)** step: unsupervised bag-wise clustering + shared-head cluster scoring produces **soft instance weights** that modulate aggregation—**reweighting importance, not selecting/dropping patches**—so high-risk groups can be up-weighted under slide-level labels. On **SLN-Breast**, this improves over the R²T backbone under the same features and splits.
 
 ![R²TC-MIL structure](img/R2TC-MIL.png)
 
-
-
 ## Experiment
+
 ### Dataset & splits
 
 We evaluate on **SLN-Breast** (slide-level binary labels). Each raw whole-slide image is at **gigapixel scale** (on the order of **10^9 pixels** at native resolution), which makes direct end-to-end processing computationally prohibitive.
@@ -32,3 +33,34 @@ MIL methods share frozen **ImageNet ResNet50-trunc (1024-d)** patch features. Th
 
 
 5-fold test metrics at first-best val AUC.
+
+### Where Clustering Acts in MIL
+
+Prior cluster-based MIL methods mainly change features, bag composition, cluster representations, or which clusters are kept. R²TC instead maps cluster scores back to soft instance weights.
+
+| Method | Role of clustering | Instance-level action |
+| --- | --- | --- |
+| CLAM (2021) | Constrains or guides feature learning | Updates features; does not reweight instances |
+| DGMIL (2022) | Shapes instance labels and feature distributions | Relabels or reshapes instance features / predictions |
+| ProDiv (2024) | Changes training bag composition | Samples or selects which instances enter the bag |
+| CAAMIL (2025) | Builds cluster-level attention and representations | Attends over clusters; does not soft-reweight instances |
+| csMIL (2025) | Learns sparse cluster pooling weights | Selects or discards whole clusters |
+| R²TC (2026) | Converts cluster scores into instance weights | Soft-reweights every instance while keeping all patches |
+
+## Citation
+
+If you use R²TC-MIL or this repository, please cite:
+
+- Code: https://github.com/brian004900/R2TC-MIL
+- DOI: pending (minted after GitHub release `v1.0.0` via Zenodo)
+
+```bibtex
+@software{brian_r2tc_mil_2026,
+  author       = {Brian},
+  title        = {{R$^2$TC-MIL}: Weakly Supervised {WSI} Classification with Cluster-Conditioned Instance Reweighting},
+  year         = {2026},
+  publisher    = {Zenodo},
+  url          = {https://github.com/brian004900/R2TC-MIL},
+  note         = {DOI pending Zenodo archive}
+}
+```
