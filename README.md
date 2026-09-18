@@ -34,7 +34,7 @@ MIL methods share frozen **ImageNet ResNet50-trunc (1024-d)** patch features. Th
 
 5-fold test metrics at first-best val AUC.
 
-### Where Clustering Acts in MIL
+## Where Clustering Acts in MIL (Clustering MIL Comparison)
 
 Prior cluster-based MIL methods mainly change features, bag composition, cluster representations, or which clusters are kept. R²TC instead maps cluster scores back to soft instance weights.
 
@@ -50,10 +50,6 @@ Prior cluster-based MIL methods mainly change features, bag composition, cluster
 ## Citation
 
 If you use R²TC-MIL or this repository, please cite:
-
-- Code: https://github.com/brian004900/R2TC-MIL
-- DOI: https://doi.org/10.5281/zenodo.22825508
-- Concept DOI: https://doi.org/10.5281/zenodo.22825507
 
 ```bibtex
 @software{brian_r2tc_mil_2026,
