@@ -52,15 +52,17 @@ Prior cluster-based MIL methods mainly change features, bag composition, cluster
 If you use R²TC-MIL or this repository, please cite:
 
 - Code: https://github.com/brian004900/R2TC-MIL
-- DOI: pending (minted after GitHub release `v1.0.0` via Zenodo)
+- DOI: https://doi.org/10.5281/zenodo.22825508
+- Concept DOI: https://doi.org/10.5281/zenodo.22825507
 
 ```bibtex
 @software{brian_r2tc_mil_2026,
-  author       = {Brian},
+  author       = {Fields, Brian},
   title        = {{R$^2$TC-MIL}: Weakly Supervised {WSI} Classification with Cluster-Conditioned Instance Reweighting},
   year         = {2026},
   publisher    = {Zenodo},
-  url          = {https://github.com/brian004900/R2TC-MIL},
-  note         = {DOI pending Zenodo archive}
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.22825508},
+  url          = {https://doi.org/10.5281/zenodo.22825508}
 }
 ```
