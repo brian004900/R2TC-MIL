@@ -20,7 +20,7 @@ Prior cluster-based MIL methods mainly change features, bag composition, cluster
 | ProDiv (2024) | Changes training bag composition | Samples or selects which instances enter the bag |
 | CAAMIL (2025) | Builds cluster-level attention and representations | Attends over clusters; does not soft-reweight instances |
 | csMIL (2025) | Learns sparse cluster pooling weights | Selects or discards whole clusters |
-| R²TC (2026) | Converts cluster scores into instance weights | Soft-reweights every instance while keeping all patches |
+| R²TC (2026-ours) | Converts cluster scores into instance weights | Soft-reweights every instance while keeping all patches |
 
 ## Experiment
 
